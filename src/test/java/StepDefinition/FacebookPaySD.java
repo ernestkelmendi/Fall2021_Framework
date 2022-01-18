@@ -2,13 +2,12 @@ package StepDefinition;
 
 import Pages.Facebook.LaunchPage;
 import Web.UseDriver;
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 
 
 public class FacebookPaySD {
-    @Given("^I lau.ch facebook website$")
+    @Given("^I launch facebook website$")
     public void launchFacebook() {
         UseDriver.openUrl("https://www.facebook.com/");
     }
