@@ -14,6 +14,7 @@ public class LaunchPage extends WebCommands {
     By loginPasswordLocator = By.id("pass");
     By loginButtonLocator = By.xpath("//button[@name='login']");
     By messengerLocator = By.linkText("Messenger");
+    By createNewAccLocator = By.linkText("Create new account");
 
     By allLinksLocator = By.tagName("a");
     By facebookPayLocator = By.linkText("Facebook Pay");
@@ -64,6 +65,10 @@ public class LaunchPage extends WebCommands {
 
     public boolean isInvalidLoginErrorDisplayed() {
         return isWebElementDisplayed(invalidLoginErrorLocator);
+    }
+
+    public void clickCreateNewAccountButton() {
+        clickThis(createNewAccLocator);
     }
 
 
