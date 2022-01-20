@@ -16,6 +16,7 @@ public class LaunchPage extends WebCommands {
     By messengerLocator = By.linkText("Messenger");
     By createNewAccLocator = By.linkText("Create new account");
 
+    //*[@id="email"]
     By allLinksLocator = By.tagName("a");
     By facebookPayLocator = By.linkText("Facebook Pay");
 

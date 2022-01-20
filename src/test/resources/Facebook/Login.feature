@@ -1,32 +1,28 @@
 Feature: Login
 
-  Scenario: Verify user gets error for invalid credentials
+  Scenario-1: Verify user gets error for invalid credentials
     Given I launch facebook website
-    When I enter `%^&&*()` as login email
-    When I enter `abcd@1234` as login password
+    When I enter '%^&&*()' as login email
+    When I enter 'abcd@1234' as login password
     When I click on login button
     Then I verify login error is displayed
 
-  Scenario: Verify user gets error for valid credentials
-    Given I launch facebook website
-    When I enter `validEmail@gmail.com` as login email
-    When I enter `correctPassword` as login password
-    When I click on login button
-    Then I verify user lands on home page
+    Scenario-2: Verify flow when user login with empty credentials on Messenger login screen
+      Given I launch facebook website
+      When I click on Messenger link
+      When I click on login button on Messenger link
+      Then I verify continue button is displayed and enabled
+      Then I verify "Keep me signed in" checkbox is not selected
 
-  Scenario: Verify user gets error for valid credentials2
+  Scenario-4: Verify current date is selected in dropdown when user lands on Sign Up screen
     Given I launch facebook website
-    When I enter `correctEmail2@gmail.com` as login email
-    When I enter `correctPassword` as login password
-    When I click on login button
-    Then I verify user lands on home page
+    When I click on sign up button
+    Then I verify current date is selected in dropdown when user lands on Sign Up screen
 
-    # Backround
-    # Scenario-1Feature:
-    # Backround
-    # Scenario-2Feature:
-    # Backround
-    # Scenario-3Feature:
+
+
+
+
 
 
 

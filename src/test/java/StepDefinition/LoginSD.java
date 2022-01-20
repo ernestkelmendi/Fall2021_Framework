@@ -9,10 +9,11 @@ import io.cucumber.java.en.When;
 public class LoginSD {
     LaunchPage launchPage = new LaunchPage();
 
-//    @When("^I enter '(.+)' as login email$")
-//    public void enterEmail(String inputEmail) {
-//        launchPage.enterLoginEmail(inputEmail);
-//    }
+    //comment when done
+    @When("^I enter '(.+)' as login email$")
+    public void enterEmail(String inputEmail) {
+       launchPage.enterLoginEmail(inputEmail);
+    }
 //
 //    @When("^I enter '(.+)' as login password$")
 //    public void enterPassword(String inputPwd) {
@@ -71,14 +72,6 @@ public class LoginSD {
     }
 
 
-    /**
-     Scenario: Verify user gets error for invalid credential
-     Given I launch facebook website
-     When I enter '%^&&*()' as login email
-     When I enter 'abcd@1234' as login password
-     When I click on login button
-     Then I verify login error 'incorrect email or password' is displayed
-     And I verify login error 'Enter credentials again' is displayed
-     */
+
 
 }
