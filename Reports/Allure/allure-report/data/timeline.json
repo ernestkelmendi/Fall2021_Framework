@@ -1,0 +1,78 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "deepaks-mbp.lan",
+    "children" : [ {
+      "name" : "42995@deepaks-mbp.lan.main(1)",
+      "children" : [ {
+        "name" : "Given I launch facebook website",
+        "uid" : "25f592974374cf25",
+        "parentUid" : "452a46ba4531d5a8d6fe72b4de2413df",
+        "status" : "passed",
+        "time" : {
+          "start" : 1642809993397,
+          "stop" : 1642809993402,
+          "duration" : 5
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Then I verify login error is displayed",
+        "uid" : "e36860e15ba07a3d",
+        "parentUid" : "452a46ba4531d5a8d6fe72b4de2413df",
+        "status" : "broken",
+        "time" : {
+          "start" : 1642810013311,
+          "stop" : 1642810013345,
+          "duration" : 34
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "When I click on login button",
+        "uid" : "63f871b73c00a9ce",
+        "parentUid" : "452a46ba4531d5a8d6fe72b4de2413df",
+        "status" : "passed",
+        "time" : {
+          "start" : 1642810001778,
+          "stop" : 1642810001778,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "When I enter '%^&&*()' as login email",
+        "uid" : "ba71730118cb410d",
+        "parentUid" : "452a46ba4531d5a8d6fe72b4de2413df",
+        "status" : "passed",
+        "time" : {
+          "start" : 1642809996642,
+          "stop" : 1642809996642,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "When I enter 'abcd@1234' as login password",
+        "uid" : "2b83ea9c098639d9",
+        "parentUid" : "452a46ba4531d5a8d6fe72b4de2413df",
+        "status" : "passed",
+        "time" : {
+          "start" : 1642809999269,
+          "stop" : 1642809999269,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "452a46ba4531d5a8d6fe72b4de2413df"
+    } ],
+    "uid" : "9f3b192987678fe422439f7319099a6c"
+  } ]
+}

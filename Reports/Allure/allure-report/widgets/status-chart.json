@@ -1,0 +1,51 @@
+[ {
+  "uid" : "e36860e15ba07a3d",
+  "name" : "Then I verify login error is displayed",
+  "time" : {
+    "start" : 1642810013311,
+    "stop" : 1642810013345,
+    "duration" : 34
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "25f592974374cf25",
+  "name" : "Given I launch facebook website",
+  "time" : {
+    "start" : 1642809993397,
+    "stop" : 1642809993402,
+    "duration" : 5
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ba71730118cb410d",
+  "name" : "When I enter '%^&&*()' as login email",
+  "time" : {
+    "start" : 1642809996642,
+    "stop" : 1642809996642,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2b83ea9c098639d9",
+  "name" : "When I enter 'abcd@1234' as login password",
+  "time" : {
+    "start" : 1642809999269,
+    "stop" : 1642809999269,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "63f871b73c00a9ce",
+  "name" : "When I click on login button",
+  "time" : {
+    "start" : 1642810001778,
+    "stop" : 1642810001778,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

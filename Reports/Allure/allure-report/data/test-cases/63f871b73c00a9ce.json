@@ -1,0 +1,64 @@
+{
+  "uid" : "63f871b73c00a9ce",
+  "name" : "When I click on login button",
+  "fullName" : "Verify user gets error for invalid credential | %^&&*() | abcd@1234 |.When I click on login button",
+  "historyId" : "41b67b1592bf5d4a74cf428e234e9be7",
+  "time" : {
+    "start" : 1642810001778,
+    "stop" : 1642810001778,
+    "duration" : 0
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Login"
+  }, {
+    "name" : "framework",
+    "value" : "CucumberJVM"
+  }, {
+    "name" : "host",
+    "value" : "deepaks-mbp.lan"
+  }, {
+    "name" : "language",
+    "value" : "JAVA"
+  }, {
+    "name" : "story",
+    "value" : "Verify user gets error for invalid credential | %^&&*() | abcd@1234 |"
+  }, {
+    "name" : "thread",
+    "value" : "42995@deepaks-mbp.lan.main(1)"
+  }, {
+    "name" : "suite",
+    "value" : "Verify user gets error for invalid credential | %^&&*() | abcd@1234 |"
+  }, {
+    "name" : "testClass",
+    "value" : "Verify user gets error for invalid credential | %^&&*() | abcd@1234 |"
+  }, {
+    "name" : "testMethod",
+    "value" : "When I click on login button"
+  }, {
+    "name" : "package",
+    "value" : "Verify user gets error for invalid credential | %^&&*() | abcd@1234 |"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "63f871b73c00a9ce.json",
+  "parameterValues" : [ ]
+}

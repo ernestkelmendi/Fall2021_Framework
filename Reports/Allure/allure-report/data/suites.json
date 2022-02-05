@@ -1,0 +1,74 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "Verify user gets error for invalid credential | %^&&*() | abcd@1234 |",
+    "children" : [ {
+      "name" : "Given I launch facebook website",
+      "uid" : "25f592974374cf25",
+      "parentUid" : "cd9059259dfb0aafecdcf11fcaff0317",
+      "status" : "passed",
+      "time" : {
+        "start" : 1642809993397,
+        "stop" : 1642809993402,
+        "duration" : 5
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "When I enter '%^&&*()' as login email",
+      "uid" : "ba71730118cb410d",
+      "parentUid" : "cd9059259dfb0aafecdcf11fcaff0317",
+      "status" : "passed",
+      "time" : {
+        "start" : 1642809996642,
+        "stop" : 1642809996642,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "When I enter 'abcd@1234' as login password",
+      "uid" : "2b83ea9c098639d9",
+      "parentUid" : "cd9059259dfb0aafecdcf11fcaff0317",
+      "status" : "passed",
+      "time" : {
+        "start" : 1642809999269,
+        "stop" : 1642809999269,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "When I click on login button",
+      "uid" : "63f871b73c00a9ce",
+      "parentUid" : "cd9059259dfb0aafecdcf11fcaff0317",
+      "status" : "passed",
+      "time" : {
+        "start" : 1642810001778,
+        "stop" : 1642810001778,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Then I verify login error is displayed",
+      "uid" : "e36860e15ba07a3d",
+      "parentUid" : "cd9059259dfb0aafecdcf11fcaff0317",
+      "status" : "broken",
+      "time" : {
+        "start" : 1642810013311,
+        "stop" : 1642810013345,
+        "duration" : 34
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "cd9059259dfb0aafecdcf11fcaff0317"
+  } ]
+}

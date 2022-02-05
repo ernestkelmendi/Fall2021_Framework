@@ -1,0 +1,64 @@
+{
+  "uid" : "2b83ea9c098639d9",
+  "name" : "When I enter 'abcd@1234' as login password",
+  "fullName" : "Verify user gets error for invalid credential | %^&&*() | abcd@1234 |.When I enter 'abcd@1234' as login password",
+  "historyId" : "d829b8ba2ccf4982908401a6912ca232",
+  "time" : {
+    "start" : 1642809999269,
+    "stop" : 1642809999269,
+    "duration" : 0
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Login"
+  }, {
+    "name" : "framework",
+    "value" : "CucumberJVM"
+  }, {
+    "name" : "host",
+    "value" : "deepaks-mbp.lan"
+  }, {
+    "name" : "language",
+    "value" : "JAVA"
+  }, {
+    "name" : "story",
+    "value" : "Verify user gets error for invalid credential | %^&&*() | abcd@1234 |"
+  }, {
+    "name" : "thread",
+    "value" : "42995@deepaks-mbp.lan.main(1)"
+  }, {
+    "name" : "suite",
+    "value" : "Verify user gets error for invalid credential | %^&&*() | abcd@1234 |"
+  }, {
+    "name" : "testClass",
+    "value" : "Verify user gets error for invalid credential | %^&&*() | abcd@1234 |"
+  }, {
+    "name" : "testMethod",
+    "value" : "When I enter 'abcd@1234' as login password"
+  }, {
+    "name" : "package",
+    "value" : "Verify user gets error for invalid credential | %^&&*() | abcd@1234 |"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "2b83ea9c098639d9.json",
+  "parameterValues" : [ ]
+}

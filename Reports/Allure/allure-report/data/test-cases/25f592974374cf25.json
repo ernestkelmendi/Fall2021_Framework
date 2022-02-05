@@ -1,0 +1,64 @@
+{
+  "uid" : "25f592974374cf25",
+  "name" : "Given I launch facebook website",
+  "fullName" : "Verify user gets error for invalid credential | %^&&*() | abcd@1234 |.Given I launch facebook website",
+  "historyId" : "5e7a37558dd65acbe3dd7ec027e2a9ef",
+  "time" : {
+    "start" : 1642809993397,
+    "stop" : 1642809993402,
+    "duration" : 5
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Login"
+  }, {
+    "name" : "framework",
+    "value" : "CucumberJVM"
+  }, {
+    "name" : "host",
+    "value" : "deepaks-mbp.lan"
+  }, {
+    "name" : "language",
+    "value" : "JAVA"
+  }, {
+    "name" : "story",
+    "value" : "Verify user gets error for invalid credential | %^&&*() | abcd@1234 |"
+  }, {
+    "name" : "thread",
+    "value" : "42995@deepaks-mbp.lan.main(1)"
+  }, {
+    "name" : "suite",
+    "value" : "Verify user gets error for invalid credential | %^&&*() | abcd@1234 |"
+  }, {
+    "name" : "testClass",
+    "value" : "Verify user gets error for invalid credential | %^&&*() | abcd@1234 |"
+  }, {
+    "name" : "testMethod",
+    "value" : "Given I launch facebook website"
+  }, {
+    "name" : "package",
+    "value" : "Verify user gets error for invalid credential | %^&&*() | abcd@1234 |"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "25f592974374cf25.json",
+  "parameterValues" : [ ]
+}

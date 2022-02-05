@@ -1,0 +1,98 @@
+{
+  "d829b8ba2ccf4982908401a6912ca232" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "2b83ea9c098639d9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1642809999269,
+        "stop" : 1642809999269,
+        "duration" : 0
+      }
+    } ]
+  },
+  "41b67b1592bf5d4a74cf428e234e9be7" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "63f871b73c00a9ce",
+      "status" : "passed",
+      "time" : {
+        "start" : 1642810001778,
+        "stop" : 1642810001778,
+        "duration" : 0
+      }
+    } ]
+  },
+  "afa4a56173b1ec5b2dd7c1179fa45030" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "e36860e15ba07a3d",
+      "status" : "broken",
+      "statusDetails" : "NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//div[text()='The email or mobile number you entered isn’t connected to an account. ']\"}\n  (Session info: chrome=97.0.4692.71)\n  (Driver info: chromedriver=97.0.4692.71 (adefa7837d02a07a604c1e6eff0b3a09422ab88d-refs/branch-heads/4692@{#1247}),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)\nCommand duration or timeout: 0 milliseconds\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'deepaks-mbp.lan', ip: 'fe80:0:0:0:184f:5953:a9de:8aa3%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '1.8.0_144'\nDriver info: org.openqa.selenium.remote.RemoteWebDriver\nCapabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\\Users\\ADMINI~1\\AppData\\L...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:54217}, handlesAlerts: true, hasMetadata: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 97.0.4692.71, webStorageEnabled: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true, webdriver.remote.sessionid: 19aff47a4371404a88d5ab5a257...}\nSession ID: 19aff47a4371404a88d5ab5a257d4eb4\n*** Element info: {Using=xpath, value=//div[text()='The email or mobile number you entered isn’t connected to an account. ']}",
+      "time" : {
+        "start" : 1642810013311,
+        "stop" : 1642810013345,
+        "duration" : 34
+      }
+    } ]
+  },
+  "5ee2f80391ef366a2326e613ac9a4742" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "ba71730118cb410d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1642809996642,
+        "stop" : 1642809996642,
+        "duration" : 0
+      }
+    } ]
+  },
+  "5e7a37558dd65acbe3dd7ec027e2a9ef" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "25f592974374cf25",
+      "status" : "passed",
+      "time" : {
+        "start" : 1642809993397,
+        "stop" : 1642809993402,
+        "duration" : 5
+      }
+    } ]
+  }
+}

@@ -14,21 +14,26 @@ public class LaunchPage extends WebCommands {
     By loginPasswordLocator = By.id("pass");
     By loginButtonLocator = By.xpath("//button[@name='login']");
     By messengerLocator = By.linkText("Messenger");
-    By createNewAccLocator = By.linkText("Create new account");
-
-    //*[@id="email"]
     By allLinksLocator = By.tagName("a");
     By facebookPayLocator = By.linkText("Facebook Pay");
-
-    By invalidLoginErrorLocator = By.xpath("//div[text()='The email or mobile number you entered isn’t connected to an account. ']");
-
+    By link_findYourAccount_Locator = By.partialLinkText("Find your account and log i");
+    By invalidLoginErrorLocator = By.xpath("//div[starts-with(text(), 'The email address or mobile')]");
+    By createNewAccountLocator = By.linkText("Create New Account");
 
 
     // Methods to interact with elements of Launch Page
 
+
+
+
     // type in login emailBox
     public void enterLoginEmail(String loginEmail) {
         type(loginEmailLocator, loginEmail);
+    }
+
+    // click "Create New Account Button"
+    public void click_createNewAccountButton(){
+        clickThis(createNewAccountLocator);
     }
 
     // if login emailBox is enabled
@@ -68,8 +73,8 @@ public class LaunchPage extends WebCommands {
         return isWebElementDisplayed(invalidLoginErrorLocator);
     }
 
-    public void clickCreateNewAccountButton() {
-        clickThis(createNewAccLocator);
+    public boolean isLink_FindYourAccount_displayed (){
+        return isWebElementDisplayed(link_findYourAccount_Locator);
     }
 
 

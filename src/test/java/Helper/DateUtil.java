@@ -43,5 +43,39 @@ public class DateUtil {
         return isDateFormatCorrect;
     }
 
+    public static String currentDate_MMM_d_yyyy(){
+        SimpleDateFormat dF = new SimpleDateFormat("MMM d yyyy");
+        Date currentDate = new Date();
+        String currentDateMMMdyyyy = dF.format(currentDate);
+        return currentDateMMMdyyyy;
+    }
+    public static String currentDate_MMMM_d_yyyy(){
+        SimpleDateFormat dF = new SimpleDateFormat("MMMM d, yyyy");
+        Date currentDate = new Date();
+        String currentDateMMMMdyyyy = dF.format(currentDate);
+        return currentDateMMMMdyyyy;
+    }
+
+    public static String getCurrent_MMMM_(){
+        SimpleDateFormat dF = new SimpleDateFormat("MMMM");
+        Date currentDate = new Date();
+        String current_MMMM = dF.format(currentDate);
+        return current_MMMM;
+    }
+
+    public static String getCurrent_yyyy_(){
+        SimpleDateFormat dF = new SimpleDateFormat("yyyy");
+        Date currentDate = new Date();
+        String current_yyyy = dF.format(currentDate);
+        return current_yyyy;
+    }
+
+    public static String currentDate_MMM_(){
+        SimpleDateFormat dF = new SimpleDateFormat("MMM");
+        Date currentDate = new Date();
+        String currentDate_MMM = dF.format(currentDate);
+        return currentDate_MMM;
+    }
+
 
 }

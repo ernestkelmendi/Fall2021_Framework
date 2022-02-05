@@ -30,6 +30,7 @@ public class WebCommands {
         return element;
     }
 
+
     public WebElement getElementWithWait(By locator) {
         Wait fWait = new FluentWait(UseDriver.getDriver())
                 .withTimeout(Duration.ofSeconds(30))
@@ -54,6 +55,11 @@ public class WebCommands {
         getElementWithWait(locator).sendKeys(data);
         Misc.sleep(2);
     }
+    public String getText(By locator) {
+        String text = getElementWithWait(locator).getText();
+        return text;
+    }
+
 
     public void type(WebElement element, String data) {
         element.sendKeys(data);
@@ -92,7 +98,7 @@ public class WebCommands {
     public void scrollDown(int pixels) {
         JavascriptExecutor js = (JavascriptExecutor) UseDriver.getDriver();     // Casting
         js.executeScript("scrollBy(0,"+pixels+");");
-        Misc.sleep(2);
+        Misc.sleep(1);
     }
 
     public void scrollUp(int pixels) {
@@ -173,6 +179,11 @@ public class WebCommands {
     public boolean isWebElementEnabled(By locator) {
         return getElementWithWait(locator).isEnabled();
     }
+
+    public boolean isWebElementSelected(By locator) {
+        return getElementWithWait(locator).isSelected();
+    }
+
 
 
 
