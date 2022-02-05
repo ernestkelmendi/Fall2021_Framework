@@ -1,49 +1,113 @@
 package Tests.Hotels;
 
 import Helper.Check;
+import Helper.DateUtil;
+import Helper.Misc;
 import Pages.Hotels.LaunchPageHotels;
+import Pages.WebCommands;
 import Web.UseDriver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-import java.util.List;
-
-public class LaunchPageTest {
+public class LaunchPageTest extends WebCommands {
 
     LaunchPageHotels lp = new LaunchPageHotels();
 
 
     @Test
-    public void verifyBackArrowButtonAreDisable_ForCurrentMonth(){
+    public void verifyBackArrowButtonIsEnabled_ForCurrentMonth(){
+        //for guests hotels.com
         UseDriver.openUrl("https://www.hotels.com/");
 
         lp.clickCheckInButton();
         boolean isCurrentMonthDisplayed = lp.isCurrentMonthDisplayed();
         Check.checkTrue(isCurrentMonthDisplayed,"Current month is NOT displayed");
-        boolean isGoBackArrowEnable = lp.isArrowGoBackButtonEnable();
-        Check.checkTrue(isGoBackArrowEnable, "'Go Back Arrow' are disable");
+
+        boolean isGoBackArrowEnabled = lp.isArrowGoBackButtonEnabled();
+        Check.checkTrue(isGoBackArrowEnabled, "'Go Back Arrow' are disable");
         lp.clickThis(LaunchPageHotels.goBackArrowLocator);
-        lp.clickThis(LaunchPageHotels.goForwardArrowLocator);
 
         UseDriver.quitWebPages();
 
     }
     @Test
-    public void verifySomeDatesAreDisable_ForCurrentMonth(){
+    public void verifyDatesAreEnabled_ForCurrentMonth(){
+        //for guests hotel.com
         UseDriver.openUrl("https://www.hotels.com/");
 
         lp.clickCheckInButton();
-        //lp.getCurrentMonth();
+
         boolean isCurrentMonthDisplayed = lp.isCurrentMonthDisplayed();
         Check.checkTrue(isCurrentMonthDisplayed,"Current month is NOT displayed");
 
-        List <WebElement> dates = lp.getDatesCurrentMonth();
-        for (WebElement date: dates){
+        int currentDate = Integer.valueOf(DateUtil.currentDate_d_());
+        int [] disabledDates = new int [currentDate-1];
+
+        int n = 0;
+
+        for (int i = 0; i<disabledDates.length; i++ ){
+            disabledDates[i] = currentDate - 1 - n;
+            By enabledDateLocator = By.xpath("//button[@disabled and text()='"+disabledDates[i]+"']");
+            WebElement date = getElement(enabledDateLocator);
             boolean isDateEnable = date.isEnabled();
-            Check.checkTrue(isDateEnable,"some dates are NOT enable");
+            Check.checkFalse(isDateEnable,"date is enable");
+            n++;
         }
 
         UseDriver.quitWebPages();
+
+    }
+    @Test
+    public void verifyChangeDatesButton(){
+
+        UseDriver.openUrl("https://www.hotels.com/");
+        lp.clickSearchTab();
+        lp.enterSearchText("bora");
+        lp.selectFromSearchSuggestions("Bora Bora");
+        lp.clickCheckInButton();
+        lp.clickGoForwardArrow();
+        lp.clickAprilFirstCheckInDate();
+        lp.clickAprilTenth_sa_CheckOutDate();
+        lp.clickApplyButton();
+        lp.clickSearchButton();
+        for (int i=1; i<9; i++){
+            scrollDown(1000);
+            Misc.sleep(2);
+        }
+
+        boolean isChangeDatesButtonEnable = lp.isChangeDatesButtonEnabled();
+        boolean isChangeDatesButtonDisplayed = lp.isChangeDatesButtonDisplayed();
+        Check.checkTrue(isChangeDatesButtonDisplayed & isChangeDatesButtonEnable,
+                "'Change Dates' button is either NOT displayed or NOT enabled");
+
+        UseDriver.quitWebPages();
+
+    }
+
+    @Test
+    public void verifyNumberOfGuests (){
+        //for travelers website
+        UseDriver.openUrl("https://www.hotels.com/");
+        lp.clickTravelers();
+        lp.increaseTravelers();
+        // 1 room, 3 travelers
+        lp.increaseTravelers();
+        // 1 room, 4 travelers
+
+        lp.addOtherRoom();
+        // 2 rooms, 5 travelers
+        lp.addOtherRoom();
+        // 3 rooms, 6 travelers
+
+        lp.clickDoneButton();
+
+        String confirmMsg = lp.getConformationTravelers();
+
+        Check.checkEquals(confirmMsg,"3 rooms, 6 travelers", "Confirmation message error");
+
+        UseDriver.quitWebPages();
+
 
     }
 }

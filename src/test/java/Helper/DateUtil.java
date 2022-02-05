@@ -77,5 +77,12 @@ public class DateUtil {
         return currentDate_MMM;
     }
 
+    public static String currentDate_d_(){
+        SimpleDateFormat dF = new SimpleDateFormat("d");
+        Date currentDate = new Date();
+        String currentDate_d_ = dF.format(currentDate);
+        return currentDate_d_;
+    }
+
 
 }
