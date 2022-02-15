@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 
 
 public class SignUpPageHotels extends WebCommands {
+
     By emailLocator = By.xpath("//input[@id='sign-up-email']");
     By passwordLocator = By.xpath("//input[@id='sign-up-password']");
     By firstNameLocator = By.xpath("//input[@name='firstName']");
@@ -17,6 +18,13 @@ public class SignUpPageHotels extends WebCommands {
     By createAccountButtonLocator = By.xpath("//button[@id='signup-button']");
     By termsAndConditionsLocator = By.xpath("//a[@id='sign-up-tc']");
     By privacyStatementLocator = By.xpath("//a[@id='sign-up-privacy']");
+    // By emailThickMarkLocator = By.xpath("(//div[@class='input-wrapper'])[1]");
+    By emailThickMarkLocator = By.xpath("(//div[@class='form-element valid'])[1]");
+    //By passwordThickMarkLocator = By.xpath("(//div[@class='form-element'])[1]");
+    By passwordThickMarkLocator = By.xpath("(//div[@class='form-element valid'])[2]");
+    By firstNameThickMarkLocator = By.xpath("(//div[@class='form-element valid'])[3]");
+    By lastNameThickMarkLocator = By.xpath("(//div[@class='form-element valid'])[4]");
+    By labelKeepMeSignedInLocator = By.xpath("//label[contains(text(),'Keep me signed in')]");
 
 
     public void enterEmail (String email) {
@@ -54,5 +62,25 @@ public class SignUpPageHotels extends WebCommands {
 
     public void clickPrivacyStatementLink (){
         clickThis(privacyStatementLocator);}
+
+    public boolean isEmailDisplayed (){
+        return isWebElementDisplayed(emailThickMarkLocator);}
+
+
+    public boolean isPasswordDisplayed (){
+        return isWebElementDisplayed(passwordThickMarkLocator);}
+
+    public boolean isFirstNameDisplayed (){
+        return isWebElementDisplayed(firstNameThickMarkLocator);}
+
+    public boolean isLastNameDisplayed (){
+        return isWebElementDisplayed(lastNameThickMarkLocator);}
+
+    public void clickKeepMeSignedIn (){
+        clickThis(labelKeepMeSignedInLocator);
+    }
+
+
+
 
 }

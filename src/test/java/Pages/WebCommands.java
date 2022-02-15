@@ -91,6 +91,9 @@ public class WebCommands {
         return UseDriver.getDriver().getWindowHandles();
     }
 
+    public boolean isElementSelected(By locator) {
+        return UseDriver.getDriver().findElement(locator).isSelected();}
+
     public void switchToHandle(String handle) {
         UseDriver.getDriver().switchTo().window(handle);
     }
@@ -100,6 +103,8 @@ public class WebCommands {
         js.executeScript("scrollBy(0,"+pixels+");");
         Misc.sleep(1);
     }
+
+
 
     public void scrollUp(int pixels) {
         JavascriptExecutor js = (JavascriptExecutor) UseDriver.getDriver();     // Casting
@@ -184,8 +189,11 @@ public class WebCommands {
         return getElementWithWait(locator).isSelected();
     }
 
+    public void toGoForwardOnce (){
+        UseDriver.getDriver().navigate().forward();}
 
-
+    public void toGoBackOnce (){
+        UseDriver.getDriver().navigate().back();}
 
 
 }

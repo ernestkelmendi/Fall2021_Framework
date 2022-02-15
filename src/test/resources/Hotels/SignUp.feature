@@ -37,3 +37,15 @@ Feature: SignUpPage
     And I click 'Create Account' button
     Then I verify message 'Please check your first name' is displayed
 
+  Scenario: Verify tick-mark is displayed
+    And I enter 'test@test.com' as email
+    And I enter 'abc1234' as password
+    And I enter 'Ernest' as first name
+    And I enter 'Kelmendi' as last name
+    And I click 'Keep me signed in'
+    Then I verify tick-mark is displayed for valid email address
+    Then I verify tick-mark is displayed for valid password
+    Then I verify tick-mark is displayed for valid first name
+    Then I verify tick-mark is displayed for valid last name
+
+

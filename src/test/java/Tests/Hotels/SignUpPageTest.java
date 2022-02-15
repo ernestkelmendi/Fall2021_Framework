@@ -109,4 +109,34 @@ public class SignUpPageTest {
         UseDriver.quitWebPages();
 
     }
+
+    @Test
+    public void verifyTickMark () {
+
+        UseDriver.openUrl("https://www.hotels.com/");
+
+        lp.clickSignIn();
+        sIn.clickSignUpLink();
+        sUp.enterEmail("test@test.com");
+        //sUp.clickEmail();
+        sUp.enterPassword("abc1234");
+        sUp.enterFirstName("Ernest");
+        sUp.enterLastName("Kelmendi");
+        sUp.clickKeepMeSignedIn();
+        boolean isEmailDisplayed = sUp.isEmailDisplayed();
+        Check.checkTrue(isEmailDisplayed,"email 'thick-mark' is NOT displayed");
+        boolean isPasswordDisplayed = sUp.isPasswordDisplayed();
+        Check.checkTrue(isPasswordDisplayed,"password 'thick-mark' is NOT displayed");
+        boolean isFirstNameDisplayed = sUp.isFirstNameDisplayed();
+        Check.checkTrue(isFirstNameDisplayed,"first name 'thick-mark' is NOT displayed");
+        boolean isLastNameDisplayed = sUp.isLastNameDisplayed();
+        Check.checkTrue(isLastNameDisplayed,"last name 'thick-mark' is NOT displayed");
+
+
+        UseDriver.quitWebPages();
+
+
+    }
+
+
 }

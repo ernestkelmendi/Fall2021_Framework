@@ -26,3 +26,28 @@ Feature: LaunchPage
     And I click 'Done' button
     And I get text from 'Travelers' button
     Then I verify number of travelers as selected
+
+  Scenario: Verify 'Price Guarantee' heading
+    And I scroll down
+    And I click on 'Our price guarantee' link
+    And I get text from 'Price Guarantee' heading
+    Then I verify 'Price Guarantee' heading is displayed
+    And I verify text from 'Price Guarantee' heading is expected
+
+  Scenario: Verify 'Instant savings. Reward* nights. And more ...' heading
+    And I scroll down
+    And I click on 'Our price guarantee' link
+    And I move back in a webpage
+    And I scroll down
+    And I click on 'Get a reward night' link
+    And I get text from 'Instant savings.' heading
+    Then I verify 'Instant savings.' heading is displayed
+    And I verify text from 'Instant savings.' heading is expected
+
+  Scenario: Verify icon is displayed
+    And I scroll down
+    Then I verify icon 'Free cancellation' is displayed
+    And I verify icon 'Our price guarantee' is displayed
+    And I verify icon 'Get a reward night' is displayed
+
+

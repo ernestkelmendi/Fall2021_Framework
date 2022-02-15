@@ -108,6 +108,50 @@ public class LaunchPageTest extends WebCommands {
 
         UseDriver.quitWebPages();
 
+    }
+    @Test
+    public void verifyOurPriceGuaranteeHeading () {
+        UseDriver.openUrl("https://www.hotels.com/");
+        scrollDown(500);
+        lp.clickOurPriceGuarantee();
+        String headingText = lp.getText_from_PriceGuaranteeHeading();
+        boolean isPriceGuaranteeHeadingDisplayed = lp.isPriceGuaranteeHeadingDisplayed();
+        Check.checkTrue(isPriceGuaranteeHeadingDisplayed,"Heading is NOT displayed");
+        Check.checkEquals(headingText, "Price Guarantee", "Error text heading");
+        UseDriver.quitWebPages();
+    }
+
+    @Test
+    public void verifyInstantSavingsHeading () {
+        UseDriver.openUrl("https://www.hotels.com/");
+        scrollDown(500);
+        lp.clickOurPriceGuarantee();
+        lp.toGoBackOnce();
+        Misc.sleep(3);
+        scrollDown(500);
+        lp.clickGetRewardNight();
+        String headingText = lp.getText_from_InstantSavingsHeading();
+        boolean isInstantSavingHeadingDisplayed = lp.isInstantSavingDisplayed();
+        Check.checkTrue(isInstantSavingHeadingDisplayed,"Heading is NOT displayed");
+        Check.checkEquals(headingText, "Instant savings. Reward* nights. And more ...", "Error text heading");
+        UseDriver.quitWebPages();
 
     }
+    @Test
+    public void verifyIconIsDisplayed () {
+        UseDriver.openUrl("https://www.hotels.com/");
+        scrollDown(500);
+        Misc.sleep(2);
+        boolean isFreeCancellationIconDisplayed = lp.isFreeCancellationIconDisplayed();
+        Check.checkTrue(isFreeCancellationIconDisplayed,"Icon 'Free cancellation' is NOT displayed");
+
+        boolean isOurPriceGuaranteeIconDisplayed = lp.isOurPriceGuaranteeIconDisplayed();
+        Check.checkTrue(isOurPriceGuaranteeIconDisplayed,"Icon 'Our price guarantee' is NOT displayed");
+
+        boolean isGetRewardNightIconDisplayed = lp.isGetRewardNightIconDisplayed();
+        Check.checkTrue(isGetRewardNightIconDisplayed,"Icon 'Get a reward night' is NOT displayed");
+        UseDriver.quitWebPages();
+
+    }
+
 }

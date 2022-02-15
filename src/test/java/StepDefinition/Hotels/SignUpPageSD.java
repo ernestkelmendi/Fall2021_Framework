@@ -66,5 +66,43 @@ public class SignUpPageSD {
     @When("^I click on 'Privacy Statement' link$")
     public void clickPrivacyStatementLink(){sUp.clickPrivacyStatementLink();}
 
+    @And("^I enter 'test@test.com' as email$")
+    public void typeValidEmail(){
+        sUp.enterEmail("test@test.com");}
+
+    @And("^I enter 'abc1234' as password$")
+    public void typeValidPassword(){
+        sUp.enterPassword("abc1234");}
+
+    @And("^I enter 'Ernest' as first name$")
+    public void typeValidFirstName(){
+        sUp.enterFirstName("Anastasia");}
+
+    @And("^I enter 'Kelmendi' as last name$")
+    public void typeValidLastName(){
+        sUp.enterLastName("Kelmendi");}
+
+    @And("^I click 'Keep me signed in'$")
+    public void clickKeepMeSignedIn () {
+        sUp.clickKeepMeSignedIn();}
+
+    @Then("^I verify tick-mark is displayed for valid email address$")
+    public void isTickMarkDisplayed_for_validEmailAddress (){
+        Check.checkTrue(sUp.isEmailDisplayed(), "Thick-mark is NOT displayed for valid email address");}
+
+    @Then("^I verify tick-mark is displayed for valid password$")
+    public void isTickMarkDisplayed_for_validPassword (){
+        Check.checkTrue(sUp.isPasswordDisplayed(), "Thick-mark is NOT displayed for valid password");}
+
+    @Then("^I verify tick-mark is displayed for valid first name$")
+    public void isTickMarkDisplayed_for_validFirstName (){
+        Check.checkTrue(sUp.isFirstNameDisplayed(), "Thick-mark is NOT displayed for valid first name");}
+
+    @Then("^I verify tick-mark is displayed for valid last name$")
+    public void isTickMarkDisplayed_for_validLastName (){
+        Check.checkTrue(sUp.isLastNameDisplayed(), "Thick-mark is NOT displayed for valid last name");
+        UseDriver.quitWebPages();}
+
+
 
 }

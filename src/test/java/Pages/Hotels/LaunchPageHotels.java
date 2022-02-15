@@ -35,8 +35,15 @@ public class LaunchPageHotels extends WebCommands {
     By addOtherRoomLocator = By.xpath("//button[text()='Add another room']");
     By doneButtonLocator = By.xpath("//button[text()='Done']");
     By confirmTravelersLocator = By.xpath("//*[@data-testid='travelers-field-trigger']");
-
-
+    By helpButtonLocator = By.xpath("//span[contains(text(),'Help')]");
+    By websiteFeedbackLocator = By.xpath("(//a[contains(text(),'Website feedback')])[1]");
+    By ourPriceGuaranteeLocator = By.xpath("//h3[contains(text(),'Our price guarantee')]");
+    By priceGuaranteeHeadingLocator = By.xpath("//h1[contains(text(),'Price Guarantee')]");
+    By getRewardNightLocator = By.xpath("//h3[contains(text(),'Get a reward night')]");
+    By instantSavingsHeadingLocator = By.xpath("//h1[contains(text(),'Instant savings.')]");
+    By freeCancellationIconLocator = By.xpath("//li[@class='_2lKfOI _2Y71AG _3LHmkp']");
+    By ourPriceGuaranteeIconLocator = By.xpath("//li[@class='bPi4hj _2Y71AG _1geHg4']");
+    By getRewardNightIconLocator = By.xpath("//li[@class='_3QWktI _2Y71AG _3SZFs0']");
 
 
     public void clickSearchTab() {
@@ -66,8 +73,6 @@ public class LaunchPageHotels extends WebCommands {
 
     public boolean isCurrentMonthDisplayed (){
         return isWebElementDisplayed(currentMonthLocator);}
-
-
 
     public boolean isArrowGoBackButtonEnabled (){
         return isWebElementEnabled(goBackArrowLocator);}
@@ -110,6 +115,39 @@ public class LaunchPageHotels extends WebCommands {
 
     public String getConformationTravelers (){
         return getText(confirmTravelersLocator);}
+
+    public void clickHelpButton (){
+        clickThis(helpButtonLocator);}
+
+    public void clickWebsiteFeedbackLocator () {
+        clickThis(websiteFeedbackLocator);}
+
+    public void clickOurPriceGuarantee (){
+        clickThis(ourPriceGuaranteeLocator);}
+
+    public String getText_from_PriceGuaranteeHeading (){
+        return getText(priceGuaranteeHeadingLocator);}
+
+    public boolean isPriceGuaranteeHeadingDisplayed (){
+        return isWebElementDisplayed(priceGuaranteeHeadingLocator);}
+
+    public void clickGetRewardNight (){
+        clickThis(getRewardNightLocator);}
+
+    public String getText_from_InstantSavingsHeading (){
+        return getText(instantSavingsHeadingLocator);}
+
+    public boolean isInstantSavingDisplayed (){
+        return isWebElementDisplayed(instantSavingsHeadingLocator);}
+
+    public boolean isFreeCancellationIconDisplayed (){
+        return isWebElementDisplayed(freeCancellationIconLocator);}
+
+    public boolean isOurPriceGuaranteeIconDisplayed (){
+        return isWebElementDisplayed(ourPriceGuaranteeIconLocator);}
+
+    public boolean isGetRewardNightIconDisplayed (){
+        return isWebElementDisplayed(getRewardNightIconLocator);}
 
 
 }
