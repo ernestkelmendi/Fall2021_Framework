@@ -92,4 +92,69 @@ public class LaunchPageHotelsSD extends WebCommands {
         Check.checkEquals(lp.getConformationTravelers(),"3 rooms, 6 travelers", "Confirmation message error");
         UseDriver.quitWebPages();}
 
+    @When("^I click on 'Help' button$")
+    public void clickHelpButton(){
+        lp.clickHelpButton();}
+
+    @When("^I click on 'Website feedback' link$")
+    public void clickWebsiteFeedbackLink(){
+        lp.clickWebsiteFeedbackLocator();}
+
+    @And("^I scroll down$")
+    public void scrollDown (){
+        scrollDown(500);}
+
+    @Then("^I verify icon 'Free cancellation' is displayed$")
+    public void isFreeCancellationIconDisplayed (){
+        Check.checkTrue(lp.isFreeCancellationIconDisplayed(), "Icon 'Free cancellation' is NOT displayed ");}
+
+    @And("^I verify icon 'Our price guarantee' is displayed$")
+    public void isOurPriceGuaranteeIconDisplayed (){
+        Check.checkTrue(lp.isOurPriceGuaranteeIconDisplayed(), "Icon 'Our price guarantee' is NOT displayed ");}
+
+    @And("^I verify icon 'Get a reward night' is displayed$")
+    public void isGetRewardNightIconDisplayed (){
+        Check.checkTrue(lp.isGetRewardNightIconDisplayed(), "Icon 'Get a reward night' is NOT displayed ");
+        UseDriver.quitWebPages();}
+
+    @And("^I click on 'Our price guarantee' link$")
+    public void clickOurPriceGuaranteeLink(){
+        lp.clickOurPriceGuarantee();}
+
+    @And("^I click on 'Get a reward night' link$")
+    public void clickGetRewardNightLink(){
+        lp.clickGetRewardNight();}
+
+    @And("^I move back in a webpage$")
+    public void moveBackOnce (){
+        lp.toGoBackOnce();
+        Misc.sleep(3);}
+
+    @Then("^I verify 'Instant savings.' heading is displayed$")
+    public void isInstantSavingsHeadingDisplayed (){
+        Check.checkTrue(lp.isInstantSavingDisplayed(), "Heading 'Instant savings.' is NOT displayed ");}
+
+    @Then("^I verify 'Price Guarantee' heading is displayed$")
+    public void isPriceGuaranteeHeadingDisplayed (){
+        Check.checkTrue(lp.isPriceGuaranteeHeadingDisplayed(), "Heading 'Price Guarantee' is NOT displayed ");}
+
+    @And("^I get text from 'Price Guarantee' heading$")
+    public String getText_from_PriceGuaranteeHeading (){
+        return lp.getText_from_PriceGuaranteeHeading();}
+
+    @And("^I get text from 'Instant savings.' heading$")
+    public String getText_from_InstantSavingsHeading (){
+        return lp.getText_from_InstantSavingsHeading();}
+
+    @And("^I verify text from 'Instant savings.' heading is expected$")
+    public void verifyTextInstantSavingsHeading () {
+        Check.checkEquals(lp.getText_from_InstantSavingsHeading(), "Instant savings. Reward* nights. And more ...", "Error text heading");
+        UseDriver.quitWebPages();}
+
+    @And("^I verify text from 'Price Guarantee' heading is expected$")
+    public void verifyTextPriceGuaranteeHeading () {
+        Check.checkEquals(lp.getText_from_PriceGuaranteeHeading(), "Price Guarantee", "Error text heading");
+        UseDriver.quitWebPages();}
+
+
 }
